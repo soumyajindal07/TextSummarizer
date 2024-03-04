@@ -41,7 +41,7 @@ def textSummarizeUsingPEGASUS(input:str):
 
 @app.post("/FACEBOOK-bartbase")
 def textSummarizeUsingBARTBase(input:str):
-    bartBasePipeline = pipeline(task='summarization', model="facebook/bart-base")    
+    bartBasePipeline = pipeline(task='summarization', model="Falconsai/text_summarization")    
     result = bartBasePipeline(input,max_length=100, min_length=30, do_sample=False)
     try:
         return result[0]['summary_text']
